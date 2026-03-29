@@ -1,149 +1,166 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/pG3gvzt-)
-# PCCCS495 – Term II Project
-
-## AuctionBiddingSystem
+# PCCCS495 – Term II Project  
+## 🏷️ Auction Bidding System
 
 ---
 
-## The Auction Bidding System is designed to facilitate online auctions for various types of items, supporting both live auctions with fixed durations and reserve auctions that require meeting a minimum price threshold. The system needs to handle multiple bidders, manage auction lifecycles, provide real-time bidding capabilities, and maintain data persistence.
- Key Requirements:
-✅ Support for different auction types (live and reserve)
-✅ Item categorization (physical and digital items)
-✅ Bidder registration and management
-✅ Bid validation and auction rules enforcement
-✅ Observer pattern for notifications and logging
-✅ File-based data persistence
-✅ Command-line interface for user interaction
-✅ Error handling for various failure scenarios
-The system must demonstrate strong object-oriented programming principles including inheritance, polymorphism, abstraction, and encapsulation while providing a robust and user-friendly auction platform.
----
+## 📌 Project Description
 
-## The target users of this system are buyers who participate in auctions by placing bids, and sellers who create auctions to sell their items. Additionally, an admin can manage and monitor the system.
+The **Auction Bidding System** is designed to facilitate online auctions for various types of items. It supports both **live auctions** (time-based) and **reserve auctions** (minimum price-based).
+
+The system handles multiple bidders, manages auction lifecycles, enables real-time bidding, and ensures data persistence.
 
 ---
 
-## The core features include multiple auction types, item and bidder management, bid validation, auction lifecycle handling, observer-based notifications, file persistence, CLI interaction, and robust error handling.
+## 🎯 Key Requirements
 
-- 
-- 
-- 
-
----
-
-## OOP Concepts Used
-
-- Abstraction
-- Inheritance
-- Polymorphism
-- Exception Handling
-- Collections / Threads
+- ✅ Support for different auction types (Live & Reserve)
+- ✅ Item categorization (Physical & Digital)
+- ✅ Bidder registration and management
+- ✅ Bid validation and rule enforcement
+- ✅ Observer pattern for notifications and logging
+- ✅ File-based data persistence
+- ✅ Command-line interface (CLI)
+- ✅ Robust error handling
 
 ---
 
-## Proposed Architecture Description
-The Auction Bidding System is designed using a modular, layered architecture that follows core Object-Oriented Programming (OOP) principles. The system is divided into multiple layers, each responsible for a specific functionality, ensuring clean structure, scalability, and maintainability.
+## 👥 Target Users
 
-📦 1. Presentation Layer (CLI)
-Implemented in Main.java
-Handles:
-User input
-Menu display
-Interaction with the system
+- **Buyers (Bidders):** Participate in auctions and place bids  
+- **Sellers:** Create auctions and list items  
+- **Admin (Optional):** Monitor and manage the system  
 
-Acts as the entry point for the application.
+---
 
-⚙️ 2. Business Logic Layer
-Implemented in core/AuctionManager.java
-Handles:
-Auction registration and retrieval
-Bidder management
-Coordination between system components
+## 🚀 Core Features
 
-Acts as the central controller of the system.
+- 🔨 Multiple auction types (Live & Reserve)
+- 📦 Item management (Physical & Digital items)
+- 👤 Bidder registration & tracking
+- 💰 Bid validation and processing
+- ⏱️ Auction lifecycle management
+- 👁️ Observer-based notifications (Logger & Notifier)
+- 💾 File-based data persistence
+- 🖥️ Command-line interface (CLI)
+- ⚠️ Exception handling system
 
-🔨 3. Domain Layer (Models)
-Located in model/ and auction/
-Key classes:
-Auction, LiveAuction, ReserveAuction
-Item, PhysicalItem, DigitalItem
-Bid, Bidder
-Responsibilities:
-Represent real-world entities
-Implement business rules (e.g., bid validation)
+---
 
-This is the core of the application logic.
+## 🧠 OOP Concepts Used
 
-👁️ 4. Observer Layer
-Located in observer/
-Components:
-AuctionObserver (interface)
-AuctionLogger
-BidderNotifier
-Responsibilities:
-Event handling
-Logging auction activity
-Notifying bidders
+- Abstraction  
+- Inheritance  
+- Polymorphism  
+- Encapsulation  
+- Exception Handling  
+- Design Patterns:
+  - Observer Pattern  
+  - Template Method Pattern  
 
-Implements the Observer Design Pattern for loose coupling.
+---
 
-💾 5. Persistence Layer
-Implemented in storage/FileManager.java
-Handles:
-Saving auction and bidder data
-Loading data from files
+## 🏗️ Proposed Architecture
 
-Provides file-based data persistence.
+The system follows a **modular, layered architecture** ensuring separation of concerns and scalability.
 
-⚠️ 6. Exception Handling
-Located in exceptions/
-Custom exceptions:
-InvalidBidException
-AuctionClosedException
-ReservePriceNotMetException
+### 📦 1. Presentation Layer (CLI)
+- Implemented in `Main.java`
+- Handles user input, menu display, and interaction  
+- Acts as the **entry point**
 
-Ensures robust error handling and clear feedback.
+---
 
-🔄 System Flow
+### ⚙️ 2. Business Logic Layer
+- Implemented in `core/AuctionManager.java`
+- Manages auctions, bidders, and system coordination  
+- Acts as the **central controller**
+
+---
+
+### 🔨 3. Domain Layer (Models)
+- Located in `model/` and `auction/`
+- Includes:
+  - `Auction`, `LiveAuction`, `ReserveAuction`
+  - `Item`, `PhysicalItem`, `DigitalItem`
+  - `Bid`, `Bidder`
+
+- Responsible for:
+  - Core business logic  
+  - Real-world entity representation  
+
+---
+
+### 👁️ 4. Observer Layer
+- Located in `observer/`
+- Components:
+  - `AuctionObserver`
+  - `AuctionLogger`
+  - `BidderNotifier`
+
+- Handles:
+  - Event notifications  
+  - Logging  
+  - Bidder updates  
+
+---
+
+### 💾 5. Persistence Layer
+- Implemented in `storage/FileManager.java`
+- Handles saving and loading data from files  
+
+---
+
+### ⚠️ 6. Exception Handling
+- Located in `exceptions/`
+- Includes:
+  - `InvalidBidException`
+  - `AuctionClosedException`
+  - `ReservePriceNotMetException`
+
+---
+
+## 🔄 System Flow
+
+
 User (CLI)
-   ↓
-Main.java (Presentation Layer)
-   ↓
-AuctionManager (Business Logic)
-   ↓
-Auction / Item / Bidder (Domain Layer)
-   ↓
+↓
+Main.java
+↓
+AuctionManager
+↓
+Auction / Item / Bidder
+↓
 Observers (Logger & Notifier)
-   ↓
-FileManager (Persistence)
+↓
+FileManager (Storage)
+
 
 ---
 
-## How to Run
-From project root (Windows PowerShell):
+## ▶️ How to Run
 
-cd c:\AuctionBiddingSystem
-go to src and run terminal and run main "java Main.java"
+### 📍 Steps (Windows PowerShell)
 
----
+```
+cd AuctionBiddingSystem
+cd src
+java Main.java
 
-## Git Discipline Notes
-* Initial commit: Project setup with basic structure
-* Add abstract Item base class with common properties
-* Add PhysicalItem and DigitalItem concrete classes
-* Add Bid immutable value object and Bidder class
-* Add abstract Auction base class with template method pattern
-* Add LiveAuction and ReserveAuction concrete implementations  
-* Add observer pattern implementation
-* Add AuctionManager central registry
-* Add custom exception classes for error handling
-* Add FileManager utility class for data persistence
-* Add Main.java console UI with complete menu system
-* Add comprehensive documentation and project files
-* Test application functionality - demo runs successfully
-* Add sample auction data and test results
-* Implement auction manager and file persistence
-* Add observer pattern for logging and notifications
-* Implement auction system with multiple types
-* Initial project structure and exceptions
-* Refactor auction core, add observers & storage
-* Update README with project information
+
+📈 Git Discipline Notes
+Initial project setup
+Added abstract Item class
+Implemented PhysicalItem & DigitalItem
+Created Bid and Bidder models
+Designed abstract Auction class
+Implemented LiveAuction & ReserveAuction
+Added Observer Pattern (Logger & Notifier)
+Built AuctionManager
+Added custom exceptions
+Implemented file persistence (FileManager)
+Developed CLI (Main.java)
+Testing and sample data added
+Refactoring and documentation updates
+🎉 Conclusion
+
+This project demonstrates strong Object-Oriented Design, proper use of design patterns, and a scalable architecture. It serves as a solid foundation for building real-world auction platforms.
