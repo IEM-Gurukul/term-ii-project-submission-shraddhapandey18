@@ -149,19 +149,19 @@ java Main.java
 
 📈 Git Discipline Notes
 
-Initial project setup
-Added abstract Item class
-Implemented PhysicalItem & DigitalItem
-Created Bid and Bidder models
-Designed abstract Auction class
-Implemented LiveAuction & ReserveAuction
-Added Observer Pattern (Logger & Notifier)
-Built AuctionManager
-Added custom exceptions
-Implemented file persistence (FileManager)
-Developed CLI (Main.java)
-Testing and sample data added
-Refactoring and documentation updates
+* Initial project setup
+* Added abstract Item class
+* Implemented PhysicalItem & DigitalItem
+* Created Bid and Bidder models
+* Designed abstract Auction class
+* Implemented LiveAuction & ReserveAuction
+* Added Observer Pattern (Logger & Notifier)
+* Built AuctionManager
+* Added custom exceptions
+* Implemented file persistence (FileManager)
+* Developed CLI (Main.java)
+* Testing and sample data added
+* Refactoring and documentation updates
 
 
 
