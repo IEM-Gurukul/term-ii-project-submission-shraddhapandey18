@@ -796,14 +796,6 @@ The project followed an incremental development approach with clear commit messa
 * Update README with project information
 ```
 
-### Screenshot of Commit History
-
-[Insert screenshot of `git log --oneline --graph` output here]
-
-The development followed a bottom-up approach, starting with core data models and building up to the complete application with proper separation of concerns.
-
----
-
 ## 7. Conclusion & Future Scope
 
 ### Conclusion
@@ -836,15 +828,8 @@ The system provides a solid foundation for auction management with support for m
 
 ## Appendix
 
-### A. Initial Project Proposal
 
-[Insert copy of initial project proposal document]
-
-### B. Review Mail (APPROVED_MINOR)
-
-[Insert copy of review mail with APPROVED_MINOR status]
-
-### C. Source Code Structure
+### Source Code Structure
 
 ```
 src/
@@ -856,5 +841,3 @@ src/
 ├── observer/
 └── storage/
 ```
-
-**Note:** Full source code not included as per guidelines. Available in project repository.
