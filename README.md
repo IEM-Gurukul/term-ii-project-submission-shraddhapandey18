@@ -141,7 +141,6 @@ FileManager (Storage)
 
 ### 📍 Steps (Windows PowerShell)
 
-```
 cd AuctionBiddingSystem
 cd src
 java Main.java
