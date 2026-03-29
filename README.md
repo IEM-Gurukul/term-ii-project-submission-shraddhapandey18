@@ -146,7 +146,9 @@ cd src
 java Main.java
 
 
+
 📈 Git Discipline Notes
+
 Initial project setup
 Added abstract Item class
 Implemented PhysicalItem & DigitalItem
@@ -160,6 +162,9 @@ Implemented file persistence (FileManager)
 Developed CLI (Main.java)
 Testing and sample data added
 Refactoring and documentation updates
+
+
+
 🎉 Conclusion
 
 This project demonstrates strong Object-Oriented Design, proper use of design patterns, and a scalable architecture. It serves as a solid foundation for building real-world auction platforms.
